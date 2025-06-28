@@ -1,0 +1,72 @@
+body{
+     margin: 0;
+     padding: 0;
+     background-color: rgb(197, 210, 210);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+}
+
+.Anagram-Checker{
+    width: 600px;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 12px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+    
+}
+#first{
+    margin: 0 auto;
+    width: 80%;
+    height: 30px;
+    padding: 8px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #a97eff;
+    font-size: 1rem;
+    transition: 0.3s;
+    
+    
+}
+
+#second{
+     
+    margin: 0 auto;
+    width: 80%;
+    height: 30px;
+    padding: 8px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #a97eff;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+.button{
+     margin: 0 auto;
+     width: 70%;
+     height: 30px;
+     border-radius: 8px;
+     outline: none;
+     border: 1px solid;
+     font-size: 1rem;
+     transition: 0.3s;
+     
+}
+
+#result{
+    text-align: center;
+     margin-top: 10px;
+     font-weight: bold;
+     font-size: 1.2rem;
+}
+
