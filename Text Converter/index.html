@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Text Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="imp-box" class="imp-box">
+            <h1><i class="fas fa-text-width"></i> Text Converter</h1>
+            
+            <div class="input-section">
+                <input type="text" id="input" placeholder="Enter your text here..." />
+            </div>
+            
+            <div class="button-grid">
+                <button id="Uppercase" class="btn btn-primary">
+                    <i class="fas fa-arrow-up"></i>
+                    Uppercase
+                </button>
+                <button id="Lowercase" class="btn btn-secondary">
+                    <i class="fas fa-arrow-down"></i>
+                    Lowercase
+                </button>
+                <button id="clear" class="btn btn-danger">
+                    <i class="fas fa-trash"></i>
+                    Clear
+                </button>
+                <button id="copy" class="btn btn-success" onclick="copytext()">
+                    <i class="fas fa-copy"></i>
+                    Copy
+                </button>
+            </div>
+            
+            <div class="formatting-section">
+                <h3>Text Formatting</h3>
+                <div class="format-buttons">
+                    <button onclick="bold()" class="format-btn" title="Bold">
+                        <i class="fas fa-bold"></i>
+                    </button>
+                    <button onclick="italic()" class="format-btn" title="Italic">
+                        <i class="fas fa-italic"></i>
+                    </button>
+                    <button onclick="underline()" class="format-btn" title="Underline">
+                        <i class="fas fa-underline"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="result-section">
+                <h3>Result</h3>
+                <div id="result" class="result-box"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
