@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(53, 200, 158);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+#box {
+  text-align: center;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  width: 600px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
+  min-height: 150px;
+}
+
+button {
+  margin-bottom: 15px;
+  border: none;
+  background-color: rgb(53, 200, 158);
+  padding: 13px 26px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+button:hover {
+  background-color: rgb(59, 158, 130);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(32, 201, 151, 0.4),
+    /* Outer glow */ 0 4px 6px rgba(0, 0, 0, 0.1),
+    /* Subtle depth */ inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inner shine */
+  transform: scale(1.02); /* Slight zoom effect */
+  transition: all 0.2s ease;
+}
+
+#author {
+  margin-left: 60%;
+}
+
+#loder {
+  height: 35px;
+  display: none;
+  position: absolute;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  border-radius: 50%;
+  border: 8px solid rgba(0, 0, 0, 0.1); /* light base */
+  border-top: 8px solid rgb(15, 206, 25); /* highlight top */
+  animation: spin 1s linear infinite; /* animation call */
+  margin: 50px auto; /* center */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
