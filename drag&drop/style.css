@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+     display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+    height: 100vh;
+    flex-direction: column
+   
+
+    
+}
+#uploadBox{
+   border: 2px dashed #1E90FF;
+    height: 600px;
+    width:600px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 10px;
+   
+}
+#bigIcon{
+    font-size: 100px;
+    color: rgb(184, 206, 225);
+}
+#bigIcon:hover{
+    color:  #1E90FF;
+    cursor: pointer;
+
+
+}
+button{
+    height: 30px;
+    width: 150px;
+    background-color:rgb(82, 163, 234) ;
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 8px;
+}
+button:hover{
+    cursor: pointer;
+   background-color: #1E90FF
+}
+p{
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', Times, serif;
+
+}
