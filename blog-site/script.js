@@ -7,7 +7,7 @@ let page =3;
 
 const fetchPost=async()=>{
     const res = await fetch(
-         `https://dummyjson.com/products?limit=${limit}&skip=${(page - 1) * 5}`
+         `API__KEY__=${(page - 1) * 5}`
     );
     const data = await res.json();
     console.log(data);
