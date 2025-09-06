@@ -9,8 +9,8 @@
         const city = input.value.trim();
         if (!city) return;
 
-        loader.classList.remove("hidden"); // Show loader
-        resultBox.innerHTML = ""; // Clear old result
+        loader.classList.remove("hidden"); 
+        resultBox.innerHTML = ""; 
 
         try {
           const res = await fetch(
