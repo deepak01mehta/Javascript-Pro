@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#meinContainer {
+  width: 100%;
+  max-width: 600px;
+}
+
+#box {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #2d3748;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+#inputWord {
+  flex: 1;
+  padding: 16px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2d3748;
+  background: white;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+#inputWord:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+#inputWord::placeholder {
+  color: #a0aec0;
+}
+
+#serachBtn {
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+  justify-content: center;
+}
+
+#serachBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+#serachBtn:active {
+  transform: translateY(0);
+}
+
+#result {
+  min-height: 60px;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.word {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.phonetics {
+  background: #f7fafc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #667eea;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  color: #4a5568;
+}
+
+.phonetics audio {
+  margin-left: 10px;
+  height: 30px;
+}
+
+.meanings {
+  margin-bottom: 25px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.meanings strong {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.meanings ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meanings li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  padding-left: 25px;
+}
+
+.meanings li:last-child {
+  border-bottom: none;
+}
+
+.meanings li:before {
+  content: "•";
+  color: #667eea;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+}
+
+/* Loading state */
+#result.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  color: #667eea;
+  font-weight: 500;
+}
+
+/* Error state */
+#result.error {
+  color: #e53e3e;
+  text-align: center;
+  font-weight: 500;
+  padding: 20px;
+  background: #fed7d7;
+  border-radius: 10px;
+  border: 1px solid #feb2b2;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #box {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  #serachBtn {
+    width: 100%;
+  }
+
+  .word {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  #box {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #inputWord,
+  #serachBtn {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+}
+
+/* Animation for results */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.word,
+.phonetics,
+.meanings {
+  animation: fadeIn 0.5s ease-out;
+}
