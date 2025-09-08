@@ -1,0 +1,44 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container{
+    display: flex;
+    gap: 20px;
+
+}
+#gallery{
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    gap: 15px;
+}
+
+#gallery img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+}
+#gallery img:hover{
+    transform: scale(1.05);
+}
+
+#details {
+    flex: 1;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+#details{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
