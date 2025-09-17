@@ -20,11 +20,17 @@ function closeModel() {
   currentTaskSpan = null;
 }
 
+//  Add new task
 btn.addEventListener("click", () => {
   let tasktext = output.value.trim();
 
   if (tasktext !== "") {
     let task = document.createElement("div");
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.style.marginRight = "10px";
+
     const taskContent = document.createElement("span");
     taskContent.textContent = tasktext;
 
@@ -33,8 +39,19 @@ btn.addEventListener("click", () => {
     editbtn.style.marginLeft = "10px";
 
     const deletebtn = document.createElement("button");
-    deletebtn.textContent = "delete";
+    deletebtn.textContent = "Delete";
     deletebtn.style.marginLeft = "10px";
+
+    //  checkbox event
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        taskContent.style.textDecoration = "line-through";
+        taskContent.style.color = "gray";
+      } else {
+        taskContent.style.textDecoration = "none";
+        taskContent.style.color = "black";
+      }
+    });
 
     editbtn.addEventListener("click", () => {
       openModel(taskContent.textContent, taskContent);
@@ -43,6 +60,7 @@ btn.addEventListener("click", () => {
       task.remove();
     });
 
+    task.appendChild(checkbox);
     task.appendChild(taskContent);
     task.appendChild(editbtn);
     task.appendChild(deletebtn);
@@ -51,18 +69,21 @@ btn.addEventListener("click", () => {
   } else {
     alert("please enter a task");
   }
-  output.value="";
+
+  output.value = "";
 });
+
+//  Save edited task
 save.addEventListener("click", () => {
   const newText = modalInput.value.trim();
 
   if (newText && currentTaskSpan) {
     currentTaskSpan.textContent = newText;
-
     closeModel();
   } else {
     alert("Task cannot be empty");
   }
 });
 
+// ✅ Cancel edit
 cencel.addEventListener("click", closeModel);

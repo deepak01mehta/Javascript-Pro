@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Appointment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
+
+    <div id="appointmentForm" class="container">
+      
+      <div id="left" class="leftSide">
+        <h2>Book Appointment</h2>
+        
+        <input type="text" placeholder="Patient Name" id="name" required />
+        <input type="email" id="email" placeholder="Email" required />
+
+        <select id="doctor" required>
+          <option value="">Select Doctor</option>
+          <option value="dr ruchi">Dr Ruchi</option>
+          <option value="dr mayuri">Dr Mayuri</option>
+          <option value="dr nidhi">Dr Nidhi</option>
+          <option value="dr angesh">Dr Angesh</option>
+          <option value="dr aditya">Dr Aditya</option>
+          <option value="dr shrithi">Dr Shrithi</option>
+        </select>
+
+        <input type="date" id="date" required />
+        <input type="time" id="time" required />
+
+        <button id="btn">Book Appointment</button>
+      </div>
+
+     
+      <div id="right" class="rightSide">
+        <h3>My Appointments</h3>
+        <ul id="appointmentList"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
